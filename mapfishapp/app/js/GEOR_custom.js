@@ -9,7 +9,7 @@
 Ext.namespace("GEOR");
 
 GEOR.custom = {
-    /**
+     /*
      * Constant: CONTEXTS
      * {Array} the array of arrays describing the available contexts
      *
@@ -29,9 +29,13 @@ GEOR.custom = {
      * Defaults to ["OpenStreetMap", "app/img/contexts/osm.png", "default.wmc", "A unique OSM layer"]
      * Should *not* be empty !
      *
+     **/
     CONTEXTS: [
+        ["ADS", "app/img/contexts/rm.png", "ads.wmc", "Rennes Métropole - ADS"],
+        ["Rennes Métropole", "app/img/contexts/rm.png", "rennes.wmc", "Rennes Métropole"],
+        
         ["OpenStreetMap", "app/img/contexts/osm.png", "default.wmc", "A unique OSM layer"]
-    ],*/
+    ],
 
     /**
      * Constant: ADDONS
@@ -488,7 +492,8 @@ GEOR.custom = {
      * Constant: WMS_SERVERS
      * {Array} List of externals WMS to display in the WMS servers tab.
      */
-    WMS_SERVERS: [
+    WMS_SERVERS: [   
+        {"name": "VM Georchestra", "url": "http://vm-georchestra/geoserver/wms"},
         {"name": "GeoBretagne", "url": "http://geobretagne.fr/geoserver/wms"},
         {"name": "Sandre/zonages", "url": "http://services.sandre.eaufrance.fr/geo/zonage"},
         {"name": "Sandre/ouvrages", "url": "http://services.sandre.eaufrance.fr/geo/ouvrage"},
@@ -514,8 +519,11 @@ GEOR.custom = {
      * {Array} List of externals WFS to display in the WFS servers tab.
      */
     WFS_SERVERS: [
+        {"name": "VM Georchestra", "url": "http://vm-georchestra/geoserver/wfs"},
         {"name": "GeoBretagne", "url": "http://geobretagne.fr/geoserver/wfs"},
         {"name": "Corine Land Cover", "url": "http://sd1878-2.sivit.org/geoserver/wfs"}
     ]
     // No trailing comma for the last line (or IE will complain)
+	,
+	LAYERTREE_COLLAPSED:true
 }
