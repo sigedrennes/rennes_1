@@ -492,8 +492,8 @@ GEOR.custom = {
      * Constant: WMS_SERVERS
      * {Array} List of externals WMS to display in the WMS servers tab.
      */
-    WMS_SERVERS: [   
-        {"name": "VM Georchestra", "url": "http://vm-georchestra/geoserver/wms"},
+    WMS_SERVERS: [
+        {"name": "VM Georchestra", "url": "http://@shared.server.name@/geoserver/wms"},
         {"name": "GeoBretagne", "url": "http://geobretagne.fr/geoserver/wms"},
         {"name": "Sandre/zonages", "url": "http://services.sandre.eaufrance.fr/geo/zonage"},
         {"name": "Sandre/ouvrages", "url": "http://services.sandre.eaufrance.fr/geo/ouvrage"},
